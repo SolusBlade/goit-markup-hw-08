@@ -1,0 +1,83 @@
+.team{
+    background: var(--bg-grey-color);
+    &__list{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+    &__title{
+        text-align: center;
+        font-size: 36px;
+        line-height: 1.16;
+    
+        margin-top: 0;
+        margin-bottom: 50px;
+        &--card-title{
+            font-size: inherit;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+        
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+    }
+    &__card{
+        font-size: 16px;
+        line-height: 1.18;
+        text-align: center;
+    
+        border-radius: 0px 0px 4px 4px;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+    &__text{
+        color: var(--second-color);
+        letter-spacing: 0.03em;
+        margin-bottom: 16px;
+    }
+    &__card-box{
+        background-color: var(--main-bg-color);
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-radius: 0px 0px 4px 4px;
+    }
+}
+.soc{
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    &-items{
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        color: #AFB1B8;
+        &--foot{
+            background-color: rgba(255, 255, 255, 0.1);
+            color:var(--white-color);
+            transition: background-color 250ms var(--animation-preset); 
+        }
+        &--foot:hover,
+        &--foot:focus{
+            background-color: var(--acsent-color);
+        }
+    }
+    &-link{
+        display: flex;
+        width: 44px;
+        height: 44px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    
+        transition: color 250ms var(--animation-preset), background-color 250ms var(--animation-preset); 
+        &:hover,
+        &:focus{
+            background-color: var(--acsent-color);
+            color:var(--white-color);
+        }
+    }
+    &-ico{
+        fill: currentColor;
+    }
+}
+
+

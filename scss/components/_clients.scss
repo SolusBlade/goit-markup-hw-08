@@ -1,0 +1,46 @@
+.clients{
+    &__title{
+        font-size: 36px;
+        line-height: 1.16;
+        letter-spacing: 0.03em;
+        font-weight: 700;
+        text-align: center;
+        
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+    &__list{
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+    }
+}
+.clients__items{
+    & .link{
+        width: 170px;
+        height: 92px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #AFB1B8;
+        border: 1px solid #AFB1B8;
+        border-radius: 4px;
+        
+        transition: color 250ms var(--animation-preset), border 250ms var(--animation-preset);
+        &:hover,
+        &:focus{
+            color: var(--acsent-color);
+            border: 1px solid currentColor;
+        }
+    }
+    & .icon,
+    & .icon{
+        fill: currentColor;
+    }
+}
+
+
+
+

@@ -1,0 +1,91 @@
+.footer{
+    background: var(--bg-dark-color);
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    & .foot-link:hover,
+    & .foot-link:focus{
+        color: var(--acsent-color)
+    }
+    & .container{
+        display: flex;
+    }
+    &-first-box{
+        margin-right: 70px;
+    }
+    &-second-box{
+        margin-right: 93px;
+    }
+    &-text{
+        font-weight: 700;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--white-color);
+
+        margin-top: 12px;
+        margin-bottom: 20px;
+    }
+    & .foot-form{
+        display: flex;
+        align-items: center;
+    }
+    & .form-btn{
+        display: flex;
+        align-items: center;
+        padding: 10px 28px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+    & .form-input[type="email"]{
+        display: flex;
+        width: 360px;
+        margin-right: 12px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: calc(20/16);
+        letter-spacing: 0.03em;
+
+        color: rgba(255, 255, 255, 0.6);
+        border-color: var(--bg-dark-color);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        outline: none;
+        background-color: transparent;
+    }
+    .foot-form input::placeholder{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: calc(20/16);
+        letter-spacing: 0.03em;
+    
+        color: rgba(255, 255, 255, 0.6);
+    }
+    .form-btn-ico{
+        fill: var(--white-color);
+        margin-left: 10px;
+    }
+}
+.foot-adress{
+    .adress-link{
+        color: var(--white-color);
+        font-style: normal;
+    }
+    .foot-link{
+        font-style: normal;
+        color: var(--footer-alfa-color);
+    
+        transition: color 250ms var(--animation-preset);
+    }
+    .list .list-items:not(:last-child){
+        display: block;
+        margin-top: 0;
+        margin-bottom: 9px;
+    }
+}
