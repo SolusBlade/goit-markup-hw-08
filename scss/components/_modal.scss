@@ -15,7 +15,6 @@
     }
     &-form{
         position: absolute;
-        width: 528px;
         min-height: 581px;
         top: 50%;
         left: 50%;
@@ -27,6 +26,13 @@
         border-radius: 4px;
         opacity: 1;
         transition: opacity 250ms var(--animation-preset), transform 250ms var(--animation-preset);
+        @media screen and (max-width: 1199px){
+            width: 100%;
+            max-width: 450px;
+        }
+        @media screen and (min-width: 1200px){
+            width: 528px;
+        }
     }
     &.is-hidden .modal-form{
         opacity: 0;
@@ -151,6 +157,10 @@
     
         color: var(--second-color);
         margin-left: 23px;
+        @media screen and (max-width: 1199px){
+            font-size: 12px;
+            line-height: calc(14/12);
+        }
     }
     .check-link{
         text-decoration: underline;
@@ -163,6 +173,9 @@
         left: 20px;
         top: 50%;
         transform: translateY(-50%);
+        @media screen and (max-width: 1199px){
+            left: 0;
+        }
         .check-ico{
             border: 2px solid var(--main-color);
             border-radius: 2px;

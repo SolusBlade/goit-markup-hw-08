@@ -6,14 +6,30 @@
     letter-spacing: 0.03em;
     line-height: 1.2;
     text-decoration: none;
+    display: flex;
     &--head{
-        margin-right: 93px;
+        @media screen and (max-width: 767px) {
+            margin-right: auto;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            margin-right: 88px;
+        }
+        @media screen and(min-width: 1200px) {
+            margin-right: 93px;
+        }
+        
     }
     &__part{
         color: #000000; 
     }
     &--foot{
         margin-bottom: 20px;
+        @media screen and(max-width: 767px) {
+            justify-content: center;
+        }
+        @media screen and (min-width: 768px) and(max-width: 1199px) {
+            justify-content: center;
+        }
     }
     &__part--white{
         color: var(--white-color);

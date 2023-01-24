@@ -1,6 +1,5 @@
 .footer{
     background: var(--bg-dark-color);
-
     padding-top: 60px;
     padding-bottom: 60px;
 
@@ -9,13 +8,36 @@
         color: var(--acsent-color)
     }
     & .container{
-        display: flex;
+        @media screen and (min-width: 1200px) {
+            display: flex;
+        }
     }
     &-first-box{
-        margin-right: 70px;
+        @media screen and(max-width: 767px) {
+            margin-bottom: 60px;
+        }
+        @media screen and (min-width: 1200px) {
+            margin-right: 70px;
+        }
     }
     &-second-box{
-        margin-right: 93px;
+        @media screen and(max-width: 767px) {
+            margin-bottom: 60px;
+        }
+        @media screen and (min-width: 1200px) {
+            margin-right: 93px;
+        }
+    }
+    &-tablet-wrap{
+        @media screen and (min-width: 768px) and(max-width: 1199px) {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 60px;
+            width: 100%;
+        }
+        @media screen and (min-width: 1200px) {
+            display: flex;
+        }
     }
     &-text{
         font-weight: 700;
@@ -28,8 +50,10 @@
         margin-bottom: 20px;
     }
     & .foot-form{
-        display: flex;
         align-items: center;
+        @media screen and (min-width: 1200px) {
+            display: flex;
+        }
     }
     & .form-btn{
         display: flex;
@@ -39,8 +63,6 @@
     }
     & .form-input[type="email"]{
         display: flex;
-        width: 360px;
-        margin-right: 12px;
         padding-left: 16px;
         padding-right: 16px;
         padding-top: 15px;
@@ -58,6 +80,20 @@
         border-radius: 4px;
         outline: none;
         background-color: transparent;
+        @media screen and(max-width: 767px) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        @media screen and (min-width: 767px) and (max-width: 1199px) {
+            width: 450px;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 360px;
+            margin-right: 12px;
+        }
     }
     .foot-form input::placeholder{
         font-weight: 400;
@@ -66,10 +102,14 @@
         letter-spacing: 0.03em;
     
         color: rgba(255, 255, 255, 0.6);
+        
     }
     .form-btn-ico{
         fill: var(--white-color);
         margin-left: 10px;
+    }
+    @media screen and(max-width: 1199px) {
+        text-align: center;
     }
 }
 .foot-adress{
@@ -87,5 +127,8 @@
         display: block;
         margin-top: 0;
         margin-bottom: 9px;
+        @media screen and(max-width: 1199px) {
+            margin-bottom: 8px;
+        }
     }
 }

@@ -3,23 +3,48 @@
     letter-spacing: 0.02em;
     line-height: 1.14;
 
-    border-bottom: 1px solid #ECECEC;;
+    border-bottom: 1px solid #ECECEC;
+    @media screen and(max-width: 767px) {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    &__menu{
+        @media screen and(max-width: 767px) {
+            display: none;
+        }
+        @media screen and(min-width: 768px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+    }
 }
 .main-nav{
-    margin-right: auto;
-
+    @media screen and(min-width: 768px){
+        margin-right: auto;
+    }
     &__list{
-        display: flex;
-        gap: 50px;
+        @media screen and(min-width: 768px) {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+        // display: flex;
+        // gap: 50px;
     }
 }
 .main-nav__link{
     color: var(--main-color);
     font-weight: 500;
-
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    @media screen and(min-width: 768px) {
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+    // display: block;
+    // padding-top: 32px;
+    // padding-bottom: 32px;
 
     position: relative;
     transition: color 250ms var(--animation-preset);
@@ -45,8 +70,19 @@
     }
 }
 .adress-list{
-    display:flex;
-    gap: 30px;
+    @media screen and(min-width: 768px) and (max-width: 1199px){
+        display: flex;
+        flex-direction: column;
+    }
+    @media screen and(min-width: 1199px){
+        display: flex;
+        gap: 30px;
+    }
+    &__item:not(:last-child){
+        @media screen and(min-width: 768px) and (max-width: 1199px){
+            margin-bottom: 10px;
+        }
+    }
     &__ico{
         fill: currentColor;
     }
@@ -59,9 +95,107 @@
         align-items: center;
     
         transition: color 250ms var(--animation-preset);
+        
         &:hover,
         &:focus{
         color: var(--acsent-color)
         }
+    }
+}
+.menu-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-bg-color);
+    z-index: 999;
+    
+    transform: translateX(100%);
+    transition: transform 250ms var(--animation-preset);
+      
+    &.is-open {
+    transform: translateX(0);
+    }
+    @media screen and(min-width: 768px) {
+        display: none;
+    }
+    .buttons--mobile-menu{
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: #000;
+        transition: color 250ms var(--animation-preset);
+        &:hover,
+        &:focus{
+            color: var(--acsent-color);
+        }
+        .icon--close{
+            fill: currentColor;
+        }
+    }
+}
+.mobile-main-nav_list{
+    margin-bottom: auto;
+    & li:not(:last-child){
+        margin-bottom: 32px;
+    }
+    .mobile-main-nav__link{
+        color: var(--main-color);
+        font-weight: 500;
+        font-size: 40px;
+        line-height: calc(47 / 40);
+        letter-spacing: 0.02em;
+        transition: color 250ms var(--animation-preset);
+        &--current{
+            color: var(--acsent-color);
+        }
+        &:hover,
+        &:focus{
+            color: var(--acsent-color);
+        }
+    }
+}
+.mobile-adress_list{
+    margin-bottom: 64px;
+    & li:not(:last-child){
+        font-weight: 500;
+        font-size: 34px;
+        line-height: calc(40 / 34);
+        letter-spacing: 0.02em;
+        color: var(--acsent-color);
+
+        margin-bottom: 32px;
+    }
+    & li:last-child{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: calc(28 / 24);
+        letter-spacing: 0.02em;
+        color: var(--second-color);
+    }
+}
+.mobile-soc_list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    .mobile-soc-list__item{
+        display: flex;
+        gap: 10px;
+    }
+    .mobile-soc-list__item:not(:last-child)::after{
+        content: "";
+        display: block;
+        width: 2px;
+        height: 22px;
+        background-color: rgba(33, 33, 33, 0.2);
+    }
+    .mobile-soc-list__link{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: calc(22 / 18);
+        letter-spacing: 0.02em;
+
+        color: var(--acsent-color);
     }
 }
