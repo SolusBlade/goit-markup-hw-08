@@ -335,6 +335,13 @@ body {
 .adress-list__link:hover, .adress-list__link:focus {
   color: var(--acsent-color);
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .adress-list__link {
+    font-size: 12px;
+    line-height: 1.1666666667;
+    letter-spacing: 0.02em;
+  }
+}
 
 .menu-container {
   position: fixed;
@@ -400,6 +407,11 @@ body {
   letter-spacing: 0.02em;
   color: var(--acsent-color);
   margin-bottom: 32px;
+}
+@media screen and (max-width: 400px) {
+  .mobile-adress_list li:not(:last-child) {
+    font-size: 26px;
+  }
 }
 .mobile-adress_list li:last-child {
   font-weight: 500;
@@ -489,8 +501,6 @@ body {
 .hero__title {
   color: var(--white-color);
   text-transform: uppercase;
-  font-size: 44px;
-  line-height: 1.36;
   letter-spacing: 0.06em;
   font-weight: 900;
   margin-left: auto;
@@ -503,6 +513,13 @@ body {
     max-width: 360px;
     font-size: 26px;
     line-height: 1.6153846154;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
   }
 }
 
