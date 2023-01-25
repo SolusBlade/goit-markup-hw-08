@@ -408,9 +408,9 @@ body {
   color: var(--acsent-color);
   margin-bottom: 32px;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) and (max-width: 400px) {
   .mobile-adress_list li:not(:last-child) {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 .mobile-adress_list li:last-child {
@@ -657,6 +657,7 @@ body {
   .team__title {
     font-size: 28px;
     line-height: 1.1785714286;
+    margin-bottom: 50px;
   }
 }
 .team__title--card-title {
@@ -752,6 +753,7 @@ body {
   .clients__title {
     font-size: 28px;
     line-height: 1.1785714286;
+    margin-bottom: 30px;
   }
 }
 .clients__list {
@@ -961,6 +963,11 @@ body {
   .filter-group {
     flex-wrap: wrap;
     margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .filter-group {
+    margin-bottom: 30px;
   }
 }
 
